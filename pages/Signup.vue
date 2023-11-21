@@ -268,7 +268,6 @@ h1{
 .signup{
   width: 60%;
   padding: 10px;
-  
 }
 
 .sidebar {
@@ -287,19 +286,11 @@ h1{
   color: #787b79;
   margin-right: 50px;
 }
-
 .signup-form{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-@media(max-width: 800px ){
-  .signup-form{
-flex-direction: column;
-align-items: center;
-  }
-}
-
 .form-group {
   margin: 10px;
   display: flex;
@@ -311,6 +302,41 @@ align-items: center;
   align-items: center;
   height: 50px;
   width: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .signup-container {
+    width: 100%;
+    height: 165%;
+  }
+
+  .content {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    
+  }
+  .sidebar {
+    margin-left: 190px;   
+    font-size: 10px;
+    font-weight:lighter;
+  
+  }
+  .sidebar>div p{
+    line-height:1em;
+    text-align: center;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+  }
+  
+}
+
+@media(max-width: 800px ){
+  .signup-form{
+flex-direction: column;
+align-items: center;
+  }
 }
 
 @media(max-width: 900px){

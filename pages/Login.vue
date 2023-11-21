@@ -14,24 +14,24 @@
   </div>
   <div class="login-page">
     <div class="login-container">
-      
+
       <Header class="Header" />
-      
+
       <div class="content">
         <div class="login text-center">
-          <h1 >Login</h1>
+          <h1>Login</h1>
 
           <form @submit.prevent="login" class="login-form">
             <div class="form-group">
               <div class="input-container">
-                <input type="phonenumber" id="phonenumber" v-model="phonenumber" placeholder="Enter registered phone number" required/>
+                <input type="phonenumber" id="phonenumber" v-model="phonenumber"
+                  placeholder="Enter registered phone number" required />
               </div>
             </div>
 
             <div class="form-group">
               <div class="input-container">
-                <input :type="showPassword ? 'password' : 'text'" id="password" v-model="password"
-                required
+                <input :type="showPassword ? 'password' : 'text'" id="password" v-model="password" required
                   placeholder="Password" />
                 <i @click="togglePasswordVisibility" :class="eyeIconClass">
                   <link rel="stylesheet"
@@ -57,9 +57,9 @@
           <img src="../assets/globe.png" alt="logo" style="max-width: 85%;" />
           <!-- Statement below the logo -->
           <div>
-            <p>Transform Communication:</p>
-            <p>Data-Driven Engagement,</p>
-            <p>Streamlined Impact.</p>
+          <p>Transform Communication:</p>
+          <p>Data-Driven Engagement,</p>
+          <p>Streamlined Impact.</p>
           </div>
         </div>
       </div>
@@ -205,9 +205,9 @@ input {
   position: relative;
 }
 
-h1{
-  font-family: 'Unbounded', sans-serif; 
-  font-style:normal;
+h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 36px;
 }
@@ -222,19 +222,13 @@ h1{
 }
 
 .login-container {
-
   border: 1px solid #ccc;
   border-radius: 40px;
   width: 95%;
   background: linear-gradient(127deg, #FFF 0.29%, rgba(255, 255, 255, 0.67) 31.2%, rgba(255, 255, 255, 0.33) 95.34%, rgba(255, 255, 255, 0.10) 116.12%, rgba(255, 255, 255, 0.00) 145.68%, rgba(255, 255, 255, 0.00) 174.9%);
   backdrop-filter: blur(75px);
-}  
-@media only screen and (max-width: 768px) {
- .login-container{
-  width: 100%;
-  height: 150%;
- } 
 }
+
 .content {
   padding: 10px;
   display: flex;
@@ -243,13 +237,6 @@ h1{
   width: 100%;
   height: 490px;
 }
-@media only screen and (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-  
 
 /* for moving the login form  */
 .login {
@@ -257,81 +244,39 @@ h1{
   padding: 10px;
 }
 
-  .login text-center {
-    flex-direction: column;
-    align-items: center;
-  }
+.login text-center {
+  flex-direction: column;
+  align-items: center;
+}
 
 
 .sidebar {
   width: 30%;
   padding: 10px;
   margin-right: 200px;
-  top: 25px;
-  position: sticky;
 }
-
 
 .sidebar > div {
   text-align: center;
-  line-height: 1em;
-  max-width: 100%; /* make sure the content doesn't overflow */
-  margin-left: 100 px ; /* center the content */
+  line-height: 1em; 
 }
-
-
 .sidebar>div p {
-  padding-right: 50px;
   font-size: 15px;
   font-family: 'Unbounded', sans-serif;
   color: #787b79;
-  
+  margin-right: 50px;
 }
-@media only screen and (max-width: 768px) {
-  .sidebar {
-  width: 50%;
-  padding: 10px;
-  margin-right: 200px;
-}
-
-  .sidebar>div p {
-  height: 50px;  
-  padding-left: 190px;
-  font-size: 15px;
-  font-family: 'Unbounded', sans-serif;
-  color: #787b79;
-  
-}
-  .sidebar > div {
-  
-  text-align: center;
-  line-height: 1em;
-  padding-bottom: 10px;
-
-}
-
-}
-
 .login-form {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-@media (max-width: 800px) {
-  .login-form {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .form-group {
   margin: 10px;
   display: flex;
   flex-direction: column;
   height: 40px;
-
 }
-
 .input-container {
   display: flex;
   align-items: center;
@@ -339,12 +284,50 @@ h1{
   width: 250px;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 768px) {
+  .login-container {
+    width: 100%;
+    height: 160%;
+  }
+
+  .content {
+    height: auto;
+    flex-direction: column;
+    padding: 10px; 
+     
+  }
+  .sidebar {
+    margin-left: 190px;   
+    font-size: 10px;
+    font-weight:lighter;
+  
+  }
+  .sidebar>div p{
+    line-height:1em;
+    text-align: center;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
   .input-container {
+  display: flex;
+  align-items: center;
+  height: 1px;
+}
+} 
+@media  only screen and  (max-width: 800px) { 
+  .login-form {
     flex-direction: column;
     align-items: center;
+    height: 230px;
   }
 }
+
 input:focus {
   outline: #ccc;
 }
@@ -376,6 +359,7 @@ input[type="password"]::placeholder {
   background-position: 2% center;
 
 }
+
 /* Define the small-button class for the smaller login button */
 .small-button {
   background-color: #07aa53;
@@ -408,6 +392,7 @@ a:hover {
 
 .text-center {
   text-align: center;
+
 }
 
 .align-forgot-password a {

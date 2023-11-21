@@ -271,6 +271,82 @@ img {
   filter: blur(130.25277709960938px);
 }
 
+@media (max-width: 480px) {
+  /* Add your styles for screens with a maximum width of 480px */
+  h2 {
+    font-size: 20px;
+  }
+
+  input[type="phonenumber"] {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Add your styles for screens with a maximum width of 320px */
+  h2 {
+    font-size: 18px;
+  }
+
+  input[type="phonenumber"] {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* Add your responsive styles for screens with a maximum width of 768px */
+  .container {
+    width: 100%;
+    height: 150%;
+    /* Adjust container width for smaller screens */
+  }
+
+  .content {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-side {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .right-side {
+    padding: 100px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  input[type="phonenumber"] {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 i {
   position: absolute;
   top: 50%;

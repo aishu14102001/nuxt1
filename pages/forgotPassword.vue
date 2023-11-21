@@ -19,7 +19,7 @@
                 <h2>Forgot Password?</h2><br><br>
                 <form @submit.prevent="resetPassword" class="form-group">
                     <div class="input-container">
-                        <input type="phonenumber" id="phonenumber" v-model="phonenumber" placeholder="Enter registered phone number" required/>
+                        <input type="tel" id="phonenumber" v-model="phonenumber" placeholder="Enter registered phone number" required/>
                     </div><br>
                     <button type="submit" class="button">Send OTP</button>
                 </form>
@@ -179,14 +179,14 @@ input {
     position: relative;
 }
 
-input[type="phonenumber"] {
+input[type="tel"] {
     width: 300px;
     height: 35px;
     border: 1px solid #d0d0d0;
     border-radius: 5px;
 }
 
-input[type="phonenumber"]::placeholder {
+input[type="tel"]::placeholder {
     color: #8f8d8d;
     padding-left: 25px;
     background-image: url('./assets/dialpad.png');
@@ -245,7 +245,7 @@ img {
     font-size: 20px;
   }
 
-  input[type="phonenumber"] {
+  input[type="tel"] {
     width: 100%;
   }
 
@@ -260,7 +260,7 @@ img {
     font-size: 18px;
   }
 
-  input[type="phonenumber"] {
+  input[type="tel"] {
     width: 100%;
   }
 
@@ -271,14 +271,15 @@ img {
 @media (max-width: 768px) {
   /* Add your responsive styles for screens with a maximum width of 768px */
   .container {
-    width: 90%;
+    width: 100%;
+    height: 150%;
     /* Adjust container width for smaller screens */
   }
 
   .content {
     height: auto;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
   }
 
   .left-side {
@@ -324,7 +325,8 @@ export default {
     },
     methods: {
         resetPassword() {
-            // Add your reset password logic here
+
+        this.$router.push("/otp")
             console.log('Resetting password for phonenumber:', this.phonenumber);
         },
     },

@@ -183,6 +183,59 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 420px) {
+  .left-side {
+    padding: 5px;
+  }
+
+  .right-side img {
+    width: 100%;
+    height: auto;
+  }
+
+  .upper,
+  .lower {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  
+  .left-side {
+    padding: 10px;
+  }
+ .right-side img{
+  width: 90%;
+  height:auto;
+
+}
+  .upper{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .lower {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .content {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+
 </style>
 <script>
 import Header from "../components/Header.vue"
